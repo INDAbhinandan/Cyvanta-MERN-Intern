@@ -5,8 +5,10 @@ const studentController=require('../controllers/studentController.js')
 
 router.get('/',studentController.getAllStudents)
 router.get('/test',studentController.testStudent)
+router.post('/addStd',studentController.addStudent)
 
 module.exports=router
 
-//http://localhost:2000/students   get
-//http://localhost:2000/students/test  get
+//http://localhost:2000/student   get
+//http://localhost:2000/student/test  get
+//http://localhost:2000/student/addStd  post

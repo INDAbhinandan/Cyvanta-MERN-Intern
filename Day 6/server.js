@@ -9,6 +9,8 @@ app.use(express.json())
 // routes
 app.use('/student',studentRoutes)
 
+
+// server creating
 const PORT=2000
 app.get('/',(req,res)=>{
     res.send("Api is running")
