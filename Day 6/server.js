@@ -1,5 +1,6 @@
 const express=require('express')
 const studentRoutes=require('./routes/studentRoutes.js')
+const connectDB=require('./config/db.js')
 const app=express()
 
 // middleware
@@ -9,6 +10,9 @@ app.use(express.json())
 // routes
 app.use('/student',studentRoutes)
 
+
+// db connection
+connectDB()
 
 // server creating
 const PORT=2000

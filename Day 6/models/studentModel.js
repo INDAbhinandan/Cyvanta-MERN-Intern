@@ -1,6 +1,14 @@
-let student=[
-    {id:1 , name:"Arjun",age:22},
-    {id:2 , name:"Anuj",age:25},
-]
+const mongoose=require('mongoose')
+const studentSchema=new 
+mongoose.Schema({
+    name:{
+        type:String,
+        require:true
+    },
+    age:{
+type:Number,
+require:true
+    }
+})
 
-module.exports=student
+module.exports=mongoose.model('Student',studentSchema)
